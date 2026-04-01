@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    min-height: 100%;
+  }
+
+  body {
+    @apply m-0 bg-page font-sans text-text;
+    background-image: linear-gradient(180deg, #fbfbfe 0%, #f4f5f9 100%);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .app-panel {
+    @apply rounded-shell border border-line bg-white shadow-shell;
+  }
+
+  .soft-card {
+    @apply rounded-card border border-line bg-white shadow-card;
+  }
+
+  .icon-btn {
+    @apply inline-flex h-9 w-9 items-center justify-center rounded-full border border-line bg-white text-slate-400;
+  }
+}
+
+.chart-grid-line {
+  border-top: 1px dashed #ececf4;
+}
+
+.donut-ring {
+  background: conic-gradient(#ef476f 0 26%, #e8b820 26% 39%, #22c55e 39% 100%);
+}
+
+.flag-en {
+  background:
+    linear-gradient(90deg, transparent 0 35%, rgba(255,255,255,.96) 35% 65%, transparent 65%),
+    linear-gradient(0deg, transparent 0 35%, rgba(255,255,255,.96) 35% 65%, transparent 65%),
+    linear-gradient(90deg, transparent 0 42%, #d92b43 42% 58%, transparent 58%),
+    linear-gradient(0deg, transparent 0 42%, #d92b43 42% 58%, transparent 58%),
+    #173f9b;
+}
+
+.flag-rw {
+  background: linear-gradient(180deg, #60adff 0 54%, #f2ca32 54% 72%, #24a45d 72% 100%);
+}
+
+.flag-rw::after {
+  content: '';
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: #ffdd52;
+}
